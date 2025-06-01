@@ -6,6 +6,8 @@ const textInput = document.getElementById("text-input");
 const status = document.getElementById("status");
 const replayBtn = document.getElementById("replay-btn");
 const historyList = document.getElementById("history-list");
+const clearHistoryBtn = document.getElementById("clear-history-btn");
+
 
 let recognition;
 let lastAudioData = null;
@@ -156,6 +158,15 @@ function loadHistory() {
     renderHistory();
   }
 }
+
+clearHistoryBtn.addEventListener("click", () => {
+  if (confirm("Are you sure you want to clear the chat history?")) {
+    history = [];
+    localStorage.removeItem("chatHistory");
+    renderHistory();
+    status.textContent = "🧹 Chat history cleared.";
+  }
+});
 
 // Load on startup
 loadHistory();
