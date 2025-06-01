@@ -4,8 +4,8 @@ const sendBtn = document.getElementById("sendBtn");
 const status = document.getElementById("status");
 const replyAudio = document.getElementById("replyAudio");
 
-// const backendUrl = "https://your-backend-url.onrender.com";
-const backendUrl = "http:127.0.0.1:8000";
+const backendUrl = "https://realtime-api-test.onrender.com";
+// const backendUrl = "http:127.0.0.1:8000";
 
 let mediaRecorder, chunks = [];
 
