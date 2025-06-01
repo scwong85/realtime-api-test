@@ -1,4 +1,4 @@
-const backendUrl = "https://your-backend-url.onrender.com"; // Replace with your actual backend
+const backendUrl = "https://realtime-api-test.onrender.com"; // Replace with your actual backend
 
 const micBtn = document.getElementById("mic-btn");
 const sendBtn = document.getElementById("send-btn");
