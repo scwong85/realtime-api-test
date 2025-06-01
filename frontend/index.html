@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GPT Speech/Text Chat</title>
+  <script defer src="app.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+  <h1 class="text-3xl font-bold mb-4">🎤📝 Talk or Type to GPT</h1>
+
+  <div class="space-y-4 w-full max-w-md">
+    <button id="recordBtn" class="w-full bg-blue-500 text-white px-6 py-3 rounded-full">🎙️ Hold to Talk</button>
+
+    <div class="flex">
+      <input id="textInput" type="text" class="flex-grow border px-4 py-2 rounded-l-md" placeholder="Type a message...">
+      <button id="sendBtn" class="bg-green-500 text-white px-4 py-2 rounded-r-md">Send</button>
+    </div>
+
+    <p id="status" class="text-gray-700"></p>
+    <audio id="replyAudio" controls class="w-full"></audio>
+  </div>
+</body>
+</html>
