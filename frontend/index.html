@@ -2,37 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AI Speech/Text Assistant</title>
   <script src="app.js" defer></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 flex flex-col items-center justify-start min-h-screen p-4">
+<body class="bg-gray-100 flex flex-col items-center min-h-screen p-4">
 
-  <div class="w-full max-w-xl bg-white shadow-lg rounded-2xl p-6 mt-6 space-y-4">
+  <div class="w-full max-w-xl bg-white shadow-lg rounded-2xl p-6 mt-6 space-y-6">
     <h1 class="text-2xl font-bold text-center text-indigo-700">🎙️ AI Speech/Text Assistant</h1>
 
-    <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-      <!-- Text input -->
+    <!-- Input Section -->
+    <div class="flex flex-col sm:flex-row gap-3">
       <input id="text-input" type="text" placeholder="Type your question..." 
              class="flex-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400 outline-none text-base" />
-
-      <!-- Send button -->
       <button id="send-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded-lg transition w-full sm:w-auto">
         Send
       </button>
     </div>
 
-    <div class="flex flex-col items-center space-y-4 mt-2">
-      <!-- Microphone button -->
-      <button id="mic-btn" class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full shadow-md text-sm sm:text-base transition w-full sm:w-auto">
+    <!-- Microphone & Replay Section -->
+    <div class="flex justify-center flex-wrap gap-4">
+      <button id="mic-btn" class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full text-sm sm:text-base shadow-md transition w-full sm:w-auto">
         🎤 Hold to Speak
       </button>
+      <button id="replay-btn" class="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 rounded-full text-sm sm:text-base shadow-md transition w-full sm:w-auto hidden">
+        🔁 Replay Last Audio
+      </button>
+    </div>
 
-      <!-- Status output -->
-      <div id="status" class="text-center text-gray-700 text-sm sm:text-base break-words max-w-full">
-        Waiting for input...
-      </div>
+    <!-- Response Status -->
+    <div id="status" class="text-center text-gray-700 text-base break-words max-w-full">
+      Waiting for input...
     </div>
   </div>
 
