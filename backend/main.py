@@ -64,7 +64,7 @@ async def get_response(prompt: str):
     return {
         "input": prompt,
         "reply": reply,
-        "audio_url": f"data:audio/mp3;base64,{audio_base64}"
+        "audio_url": f"{audio_base64}"
     }
 
 if __name__ == "__main__":
